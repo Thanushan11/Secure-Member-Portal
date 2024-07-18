@@ -10,12 +10,12 @@
 <body>
 
 <div>
-  <div class="bg-light p-5 text-center" style="height: 90vh; background: #84fab0; ">
+  <div class=" p-5 text-center bg-success p-2 text-black" style="height: 90vh; background: #84fab0; ">
     <h1>Welcome To Secure Member Portal</h1>
+    
   </div>
 </div>
   
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
