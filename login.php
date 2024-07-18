@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <?php
+
 session_start();
 include 'conn.php';
+include 'header.php';
+
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
@@ -23,7 +26,8 @@ if (isset($_POST['submit'])) {
     if ($stmt->rowCount() == 1) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if (password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
+            session_start();
+            $_SESSION['userId'] = $user['userId'];
             header("Location: protected-home.php"); 
             exit();
         } else {

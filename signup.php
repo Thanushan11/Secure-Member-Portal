@@ -1,6 +1,10 @@
 <?php 
+include 'header.php';
+
+
 if (isset($_POST['submit'])) {
     include "conn.php";
+    
     $username = $_POST['user'];
     $email = $_POST['email'];
     $city = $_POST['city'];
