@@ -6,17 +6,11 @@ if (!isset($_SESSION['userId'])) {
     header("Location: login.php");
     exit();
 }
-
-
 include 'header.php';
 
 $apiUrl = "https://data.gov.sg/api/action/datastore_search?resource_id=6228c3c5-03bd-4747-bb10-85140f87168b&limit=10";
-
-// Fetch data from API
 $response = file_get_contents($apiUrl);
 $data = json_decode($response, true);
-
-// Display public holidays
 ?>
 
 <!doctype html>
@@ -31,9 +25,9 @@ $data = json_decode($response, true);
 <body>
 
   <div class="bg-light p-5 text-center  " style="height: 90vh;">
-   <div class="container gradient-custom">
+   <div class="container ">
     <h2>Public Holidays</h2>
-    <table>
+    <table class="table table-hover table-success">
         <tr>
             <th>Date</th>
             <th>Holiday Name</th>
@@ -47,6 +41,7 @@ $data = json_decode($response, true);
         </tr>
         <?php endforeach; ?>
     </table>
+    
 </div>
   </div>
 

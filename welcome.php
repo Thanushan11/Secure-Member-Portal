@@ -10,7 +10,7 @@
 <body>
 
 <div>
-  <div class="bg-light p-5 text-center" style="height: 90vh; background: #84fab0; background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));">
+  <div class="bg-light p-5 text-center" style="height: 90vh; background: #84fab0; ">
     <h1>Welcome To Secure Member Portal</h1>
   </div>
 </div>
