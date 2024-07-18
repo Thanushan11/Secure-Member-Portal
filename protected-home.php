@@ -10,7 +10,7 @@ if (!isset($_SESSION['userId'])) {
 
 $userId = $_SESSION['userId'];
 
-// Fetch the user's name from the database
+
 $stmt = $conn->prepare("SELECT `fullName` FROM `tbl_users` WHERE `userId` = :userId");
 $stmt->bindParam(':userId', $userId);
 $stmt->execute();
@@ -19,7 +19,7 @@ if ($stmt->rowCount() > 0) {
     $row = $stmt->fetch();
     $user_name = $row['fullName'];
 } else {
-    $user_name = "User"; // Default name if user not found
+    $user_name = "User"; 
 }
 ?>
 
@@ -39,25 +39,26 @@ if ($stmt->rowCount() > 0) {
       <div class="card" style="width: 100%;">
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Update Profile</h6>
-          <a href="profile.php">Update Profile</a>
+          <a href="profile.php" class="btn btn-outline-success mx-2">Update Profile</a>
         </div>
       </div>
       <div class="card" style="width: 100%;">
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Change Password</h6>
-          <a href="account.php">Change Password</a>
+          <a href="account.php" class="btn btn-outline-success mx-2">Change Password</a>
         </div>
       </div>
       <div class="card" style="width: 100%;">
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">View Public Holidays</h6>
-          <a href="holiday.php">View Public Holidays</a>
+          <a href="holiday.php"  class="btn btn-outline-success mx-2">View Public Holidays</a>
+          
         </div>
       </div>
       <div class="card" style="width: 100%;">
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Logout</h6>
-          <a href="logout.php">Logout</a>
+          <a href="logout.php" class="btn btn-outline-success mx-2">Logout</a>
         </div>
       </div>
     </div>
